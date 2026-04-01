@@ -1,0 +1,312 @@
+/* Ana Kapsayıcı: Tam Ekran Yükseklik */
+**CSS (style.css):**
+```css
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.bg-black {
+    background-color: #111 !important; /* Orijinal koyu ton */
+}
+
+.nav-link {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important; /* Üzerine gelince sarı yanma efekti */
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    font-size: 13px;
+    transition: transform 0.2s;
+}
+
+.btn-warning:hover {
+    transform: scale(1.05);
+    background-color: #e5af06;
+}
+
+/* Sayfa aşağı kayınca header'ın üstte kalması için ek ayarlar */
+.fixed-top {
+    z-index: 1030;
+}
+
+.expanding-slider {
+    height: 80vh; /* Ekran yüksekliğinin %80'i kadar olsun */
+    margin-top: 0px; /* Header'ın altında kalması için */
+}
+
+/* Sütunlar (Paneller) */
+.panel {
+    background-size: cover; /* Resmi sığdırır */
+    background-position: center; /* Resmi ortalar */
+    background-repeat: no-repeat;
+    position: relative; /* İçindeki metinleri konumlandırmak için */
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden; /* Taşmaları gizler */
+    border-right: 1px solid rgba(255,255,255,0.1);
+    
+    /* 1. SİHİRLİ SATIR: Geçiş efekti */
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    
+    /* 2. SİHİRLİ SATIR: Varsayılan Esneklik */
+    flex: 1; 
+}
+
+/* Arka Plan Resimleri (Bu kısımları kendi resimlerinle değiştir) */
+.panel-1 { background-image: url('./IMAGES/AnasayfaMermiArkaplan.png'); }
+.panel-2 { background-image: url('./IMAGES/AnasayfaYagYakanArkaPlan.png'); }
+.panel-3 { background-image: url('./IMAGES/AnasayfaBorArkaPlan.png'); }
+
+/* HOVER DURUMU: Üzerine gelince genişlet */
+.panel:hover {
+    /* 3. SİHİRLİ SATIR: Hover olunca daha fazla esne */
+    flex: 4; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+}
+
+/* Opsiyonel: Bir panel varsayılan olarak açık kalsın */
+.panel.active {
+    flex: 2.5;
+}
+
+/* İçerik Konumlandırma */
+.panel-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+/* Dikey Başlık (Videodaki gibi) */
+.panel-header {
+    font-weight: 700;
+    margin: 0;
+    font-size: 24px;
+    transition: transform 0.6s ease;
+    transform-origin: left bottom;
+}
+
+.text-vertical {
+    writing-mode: vertical-rl; /* Yazıyı dikey yapar */
+    transform: rotate(180deg); /* Doğru yöne döndürür */
+}
+
+/* Hover Bilgisi: Varsayılan olarak gizli */
+.hover-info {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s 0.3s ease, visibility 0.4s 0.3s ease; /* Gecikmeli görünür */
+    margin-top: 20px;
+}
+
+/* HOVER DURUMUNDA BİLGİYİ GÖSTER */
+.panel:hover .hover-info {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* HOVER DURUMUNDA BAŞLIĞI DÜZELT (Opsiyonel) */
+.panel:hover .panel-header {
+    transform: rotate(0deg) scale(1.2); /* Dikeyden yataya döndür */
+    margin-bottom: 20px;
+}
+
+/* Resmi Koyu Yapma Katmanı (Opsiyonel, yazılar okunsun diye) */
+.panel::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    z-index: 1;
+}
+
+/* --- Yeni Ürünler Bölümü Stilleri --- */
+
+.new-products {
+    margin-top:50px;
+    background-color: #f9f9f9; /* Hafif gri arka plan (veya bg-white kullan) */
+}
+
+/* Ürün Kartı Genel Ayarları */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Kartın kendisi için yumuşak geçiş */
+    border-radius: 10px; /* Köşeleri yuvarlat */
+}
+
+/* KARTIN KENDİSİNE HOVER: Hafifçe yukarı kalksın ve gölgesi artsın */
+.product-card:hover {
+    transform: translateY(-5px); /* Kartı 5px yukarı kaldırır */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important; /* Gölgeyi belirginleştirir */
+}
+
+/* Resim Kapsayıcısı: Taşmaları gizlemek için kritik! */
+.product-img-wrapper {
+    position: relative;
+    border-top-left-radius: 10px; /* Kartın köşeleriyle uyumlu olsun */
+    border-top-right-radius: 10px;
+    background-color: #fff; /* Resim arkası beyaz kalsın */
+}
+
+/* RESME HOVER: Resmi hafifçe büyüt */
+.product-card .card-img-top {
+    transition: transform 0.5s ease; /* Büyüme hızı */
+}
+
+.product-card:hover .card-img-top {
+    transform: scale(1.3); /* Resmi %10 büyütür */
+}
+
+/* Kart Başlığı Font Ayarı */
+.card-title {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.top-bar {
+    background-color: #f8f9fa;
+    padding: 8px 0;
+    font-size: 13px;
+    border-bottom: 1px solid #eee;
+}
+.main-nav {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
+.shop-btn {
+    background-color: #e30613;
+    color: #fff !important;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+/* --- Basında Biz ve Etkinlikler Stilleri --- */
+
+/* Kapsayıcı Kart Ayarları */
+.event-card {
+    position: relative; /* İçindeki overlay'i konumlandırmak için */
+    overflow: hidden;   /* Resim büyüyünce dışarı taşmasın */
+    border-radius: 8px; /* Köşeleri hafifçe yuvarlat */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Hafif gölge */
+    cursor: pointer;
+}
+
+/* Kartın İçindeki Resim Ayarları */
+.event-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease; /* Büyüme efekti süresi */
+}
+
+/* Kararma ve Yazı Katmanı (Overlay) */
+.event-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Kararma efekti: Siyah, %70 şeffaf arka plan */
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: #fff; /* Yazı rengi beyaz */
+    
+    padding: 20px;
+    text-align: center;
+    
+    /* Varsayılan olarak gizli */
+    opacity: 0; 
+    transition: opacity 0.4s ease; /* Belirme efekti süresi */
+}
+
+/* Konum Yazısı Font Ayarı */
+.event-location {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+/* --- HOVER ETKİLERİ --- */
+
+/* 1. Üzerine gelince resmi hafifçe büyüt */
+.event-card:hover img {
+    transform: scale(1.1); /* %10 büyütme */
+}
+
+/* 2. Üzerine gelince kararma katmanını ve yazıyı göster */
+.event-card:hover .event-overlay {
+    opacity: 1; /* Görünür yap */
+}
+
+/* --- Footer Stilleri --- */
+
+.bg-black {
+    background-color: #0d0d0d !important; /* Çok koyu siyah */
+}
+
+.main-footer {
+    border-top: 3px solid #ffc107; /* Footer'ın en üstüne ince sarı bir çizgi */
+}
+
+/* Linklerin görünümü ve hover efekti */
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #ffc107; /* Üzerine gelince sarı olsun */
+    padding-left: 8px; /* Hafif sağa kaysın */
+}
+
+/* Sosyal Medya İkon Hover Efekti */
+.social-links a {
+    font-size: 18px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: #ffc107 !important;
+    transform: translateY(-3px); /* Hafif yukarı zıplasın */
+}
+
+/* İletişim İkonları */
+.contact-item i {
+    font-size: 16px;
+}
