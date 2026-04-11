@@ -1,0 +1,43 @@
+/* --- Footer Stilleri --- */
+
+.bg-black {
+    background-color: #0d0d0d !important; /* Çok koyu siyah */
+}
+
+.main-footer {
+    border-top: 3px solid #ffc107; /* Footer'ın en üstüne ince sarı bir çizgi */
+}
+
+/* Linklerin görünümü ve hover efekti */
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #ffc107; /* Üzerine gelince sarı olsun */
+    padding-left: 8px; /* Hafif sağa kaysın */
+}
+
+/* Sosyal Medya İkon Hover Efekti */
+.social-links a {
+    font-size: 18px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: #ffc107 !important;
+    transform: translateY(-3px); /* Hafif yukarı zıplasın */
+}
+
+/* İletişim İkonları */
+.contact-item i {
+    font-size: 16px;
+}

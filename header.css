@@ -1,0 +1,44 @@
+/* Ana Kapsayıcı: Tam Ekran Yükseklik */
+**CSS (style.css):**
+```css
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.bg-black {
+    background-color: #111 !important; /* Orijinal koyu ton */
+}
+
+.nav-link {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important; /* Üzerine gelince sarı yanma efekti */
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    font-size: 13px;
+    transition: transform 0.2s;
+}
+
+.btn-warning:hover {
+    transform: scale(1.05);
+    background-color: #e5af06;
+}
+
+/* Sayfa aşağı kayınca header'ın üstte kalması için ek ayarlar */
+.fixed-top {
+    z-index: 1030;
+}
+
+.expanding-slider {
+    height: 80vh; /* Ekran yüksekliğinin %80'i kadar olsun */
+    margin-top: 0px; /* Header'ın altında kalması için */
+}

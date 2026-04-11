@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медии и Събития 444 | Автомеханика и Глобални присъствия</title>
+    <meta name="description" content="Разгледайте участието на 444 на Automechanika и нашите международни събития. Новини от индустрията и клиентски посещения.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    /* Ana Kapsayıcı: Tam Ekran Yükseklik */
+**CSS (style.css):**
+```css
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.bg-black {
+    background-color: #111 !important; /* Orijinal koyu ton */
+}
+
+.nav-link {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important; /* Üzerine gelince sarı yanma efekti */
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    font-size: 13px;
+    transition: transform 0.2s;
+}
+
+.btn-warning:hover {
+    transform: scale(1.05);
+    background-color: #e5af06;
+}
+
+/* Sayfa aşağı kayınca header'ın üstte kalması için ek ayarlar */
+.fixed-top {
+    z-index: 1030;
+}
+
+.expanding-slider {
+    height: 80vh; /* Ekran yüksekliğinin %80'i kadar olsun */
+    margin-top: 0px; /* Header'ın altında kalması için */
+}
+        body { background-color: #ffc107; color: #fff; font-family: 'Segoe UI', sans-serif; }
+        
+        .page-header { padding: 80px 0 40px; text-align: center; border-bottom: 2px solid #ff0000; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/img/events-bg.jpg'); background-size: cover; }
+        .page-header h1 { font-weight: 800; letter-spacing: 2px; color: #fff; text-transform: uppercase; }
+
+        .event-card {
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 1px solid #333;
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+
+        .event-card:hover {
+            border-color: #ff0000;
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.15);
+        }
+
+        .event-img-wrapper {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .event-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .event-card:hover .event-img { transform: scale(1.1); }
+
+        .event-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #ff0000;
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .event-body { padding: 25px; }
+        .event-date { color: #ff0000; font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
+        .event-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 15px; color: #fff; }
+        .event-text { color: #ccc; font-size: 0.95rem; line-height: 1.6; }
+
+        .btn-gallery {
+            display: inline-block;
+            margin-top: 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid #ff0000;
+            transition: 0.3s;
+        }
+        .btn-gallery:hover { color: #ff0000; padding-left: 5px; }
+
+        /* Filtreleme Butonları (Opsiyonel) */
+        .filter-btn {
+            background: transparent;
+            border: 1px solid #333;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 25px;
+            margin: 5px;
+            transition: 0.3s;
+        }
+        .filter-btn:hover, .filter-btn.active { background-color: #ff0000; border-color: #ff0000; }
+        /* --- Footer Stilleri --- */
+
+.bg-black {
+    background-color: #0d0d0d !important; /* Çok koyu siyah */
+}
+
+.main-footer {
+    border-top: 3px solid #ffc107; /* Footer'ın en üstüne ince sarı bir çizgi */
+}
+
+/* Linklerin görünümü ve hover efekti */
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #ffc107; /* Üzerine gelince sarı olsun */
+    padding-left: 8px; /* Hafif sağa kaysın */
+}
+
+/* Sosyal Medya İkon Hover Efekti */
+.social-links a {
+    font-size: 18px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: #ffc107 !important;
+    transform: translateY(-3px); /* Hafif yukarı zıplasın */
+}
+
+/* İletişim İkonları */
+.contact-item i {
+    font-size: 16px;
+}
+    </style>
+</head>
+<body>
+<header class="fixed-top shadow-sm">
+    <div class="top-header bg-dark text-white py-2 d-none d-md-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="contact-info small">
+                <i class="fas fa-phone-alt me-2 text-warning"></i> +359 877 13 85 01 
+                <span class="mx-3 text-secondary">|</span>
+                <i class="fas fa-envelope me-2 text-warning"></i> bulgaria@444.com.tr
+            </div>
+            <div class="lang-switcher small">
+                <a href="#" class="text-white text-decoration-none">BG</a>
+                <span class="mx-1">|</span>
+                <a href="#" class="text-secondary text-decoration-none">EN</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./IMAGES/444Logo.png" alt="444 Logo" height="90">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active px-3" href="index.html">НАЧАЛО</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="markaBio.html">444</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="katalogIndex.html">ПРОДУКТИ</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="contact.html">КОНТАКТИ</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="https://www.emag.bg/vendors/vendor/ignivmod?ref=seller-page-see-all-products" class="btn btn-warning fw-bold px-4 rounded-pill">ПАЗАРУВАЙ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+    <section class="page-header">
+        <div class="container">
+            <h1>Медии и Събития</h1>
+            <p class="text-secondary mt-3">Нашите следи в глобалната индустрия и моменти от нашите срещи</p>
+            
+            <div class="mt-4">
+                <button class="filter-btn active">Всички</button>
+                <button class="filter-btn">Изложения</button>
+                <button class="filter-btn">Медии</button>
+                <button class="filter-btn">Срещи</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <div class="row">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="event-card">
+                    <div class="event-img-wrapper">
+                        <span class="event-badge">Изложение</span>
+                        <img src="assets/img/auto-ist-2025.jpg" alt="Automechanika Istanbul 2025" class="event-img">
+                    </div>
+                    <div class="event-body">
+                        <div class="event-date">Юни 2025</div>
+                        <h2 class="event-title">Automechanika Istanbul 2025</h2>
+                        <p class="event-text">Очакваме ви на най-голямото автомобилно изложение в региона, за да ви представим нашите нови технологии.</p>
+                        <a href="#" class="btn-gallery">Виж галерията →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="event-card">
+                    <div class="event-img-wrapper">
+                        <span class="event-badge">Глобално</span>
+                        <img src="assets/img/auto-frankfurt.jpg" alt="Automechanika Frankfurt 2024" class="event-img">
+                    </div>
+                    <div class="event-body">
+                        <div class="event-date">Септември 2024</div>
+                        <h2 class="event-title">Automechanika Frankfurt</h2>
+                        <p class="event-text">Представихме 444 продуктите на световната сцена във Франкфурт, Германия.</p>
+                        <a href="#" class="btn-gallery">Детайли от събитието →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="event-card">
+                    <div class="event-img-wrapper">
+                        <span class="event-badge">Среща</span>
+                        <img src="assets/img/sofia-2023.jpg" alt="Sofia 2023 444" class="event-img">
+                    </div>
+                    <div class="event-body">
+                        <div class="event-date">Ноември 2023</div>
+                        <h2 class="event-title">София 2023</h2>
+                        <p class="event-text">Нашите срещи с дистрибутори и партньори в сърцето на България.</p>
+                        <a href="#" class="btn-gallery">Виж повече →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="event-card">
+                    <div class="event-img-wrapper">
+                        <span class="event-badge">Посещение</span>
+                        <img src="assets/img/client-visit.jpg" alt="Клиентски посещения 444" class="event-img">
+                    </div>
+                    <div class="event-body">
+                        <div class="event-date">Май 2024</div>
+                        <h2 class="event-title">Посещения при клиенти</h2>
+                        <p class="event-text">Винаги на терен с нашите клиенти, за да предложим най-добрите технически решения.</p>
+                        <a href="#" class="btn-gallery">Галерия →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="event-card">
+                    <div class="event-img-wrapper">
+                        <span class="event-badge">Състезание</span>
+                        <img src="assets/img/racing.jpg" alt="444 състезания" class="event-img">
+                    </div>
+                    <div class="event-body">
+                        <div class="event-date">2024 Сезон</div>
+                        <h2 class="event-title">Нашият успех в състезанията</h2>
+                        <p class="event-text">Продуктите на 444 доказаха своята мощ и при екстремни състезателни условия.</p>
+                        <a href="#" class="btn-gallery">Резултати →</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="main-footer bg-black text-white pt-5 pb-3">
+    <div class="container">
+        <div class="row g-4">
+            
+            <div class="col-md-4">
+                <img src="./IMAGES/444Logo.png" alt="444 Logo" height="60" class="mb-3">
+                <p class="text-secondary small mt-2">
+                   Нашата компания е собственик на марката и производител на продуктите 444. С над 20-годишен опит в сектора, ние произвеждаме най-доброто за вашия двигател.
+                </p>
+                <div class="social-links mt-2">
+                    <a href="https://www.facebook.com/profile.php?id=61578194187478" class="me-3 text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/444bulgaria/" class="me-3 text-white"><i class="fab fa-instagram"></i></a>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 ps-md-5">
+                <h5 class="fw-bold mb-4 text-warning">Бърз Меньо</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="index.html">Начало</a></li>
+                    <li><a href="katalogIndex.html">Нашите Продукти</a></li>
+                    <li><a href="media_and_events.html">Медиите за нас</a></li>
+                    <li><a href="start_selling.html">Стани дистрибутор</a></li>
+                    <li><a href="contact.html">Свържете се с нас</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="fw-bold mb-4 text-warning">Свържете се с нас</h5>
+                <div class="contact-item d-flex mb-3">
+
+                </div>
+                <div class="contact-item d-flex mb-3">
+                    <i class="fas fa-phone-alt text-warning mt-1 me-3"></i>
+                    <p class="text-secondary small mb-0">+359 87 713 85 01</p>
+                </div>
+                <div class="contact-item d-flex">
+                    <i class="fas fa-envelope text-warning mt-1 me-3"></i>
+                    <p class="text-secondary small mb-0">bulgaria@444.com.tr</p>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="my-4 border-secondary">
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="text-secondary small mb-0">
+                    &copy; 2026 444 МОТОРНИ МАСЛА. Всички права запазени.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

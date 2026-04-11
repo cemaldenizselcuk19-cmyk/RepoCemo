@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавки за масло 444 | Професионална защита за двигателя</title>
+    <meta name="description" content="Разгледайте нашите висококачествени добавки за масло 444. Решения за пушене, течове и износване на двигателя.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --brand-yellow: #ffc107;
+            --brand-yellow-dark: #e5af06;
+            --dark-bg: #0c0c0c;
+            --card-bg: #1a1a1a;
+        }
+
+        body { 
+            background-color: var(--dark-bg); 
+            color: #fff; 
+            font-family: 'Montserrat', sans-serif; 
+            padding-top: 130px; 
+        }
+
+        /* Navbar & Header */
+        .bg-black { background-color: #000 !important; }
+        .nav-link {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active { color: var(--brand-yellow) !important; }
+
+        /* Page Title Section */
+        .page-title { 
+            padding: 60px 0; 
+            text-align: center; 
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('assets/img/oil-bg.jpg'); 
+            background-size: cover; 
+            background-position: center;
+            border-bottom: 3px solid var(--brand-yellow); 
+        }
+        .page-title h1 { font-weight: 800; text-transform: uppercase; letter-spacing: 3px; }
+
+        .breadcrumb { font-size: 0.85rem; justify-content: center; }
+        .breadcrumb a { color: var(--brand-yellow); text-decoration: none; }
+
+        /* Product Cards */
+        .product-card {
+            background-color: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            border-color: var(--brand-yellow);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 193, 7, 0.15);
+        }
+
+        .product-img-container {
+            padding: 20px;
+            background-color: #fff;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .product-info { 
+            padding: 20px; 
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-info h2 { 
+            font-size: 1.1rem; 
+            font-weight: 700; 
+            color: #fff; 
+            margin-bottom: 12px; 
+            min-height: 2.8rem;
+            line-height: 1.3;
+        }
+
+        .product-info p { 
+            font-size: 0.82rem; 
+            color: #aaa; 
+            line-height: 1.5; 
+            margin-bottom: 20px;
+        }
+
+        .btn-detail {
+            margin-top: auto;
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: var(--brand-yellow);
+            color: #000;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .btn-detail:hover { background-color: var(--brand-yellow-dark); color: #000; }
+
+/* Footer */
+        .main-footer {
+            border-top: 4px solid var(--brand-yellow);
+            background-color: #050505 !important;
+        }
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+        .footer-links a:hover {
+            color: var(--brand-yellow);
+            padding-left: 5px;
+        }
+        .social-links a {
+            font-size: 20px;
+            color: #fff;
+            margin-right: 15px;
+            transition: 0.3s;
+        }
+        .social-links a:hover {
+            color: var(--brand-yellow);
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+<header class="fixed-top shadow-sm">
+    <div class="top-header bg-dark text-white py-2 d-none d-md-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="contact-info small">
+                <i class="fas fa-phone-alt me-2 text-warning"></i> +359 877 13 85 01 
+                <span class="mx-3 text-secondary">|</span>
+                <i class="fas fa-envelope me-2 text-warning"></i> bulgaria@444.com.tr
+            </div>
+            <div class="lang-switcher small">
+                <a href="#" class="text-warning text-decoration-none">BG</a>
+                <span class="mx-2 text-secondary">|</span>
+                <a href="#" class="text-white text-decoration-none opacity-50">EN</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./IMAGES/444Logo.png" alt="444 Logo" height="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html">НАЧАЛО</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="markaBio.html">444</a></li>
+                    <li class="nav-item"><a class="nav-link active px-3" href="katalogIndex.html">ПРОДУКТИ</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="contact.html">КОНТАКТИ</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="https://www.emag.bg/vendors/vendor/ignivmod?ref=seller-page-see-all-products" class="btn btn-warning fw-bold px-4 rounded-pill">ПАЗАРУВАЙ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="page-title">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Начало</a></li>
+                <li class="breadcrumb-item"><a href="katalogIndex.html">Продукти</a></li>
+                <li class="breadcrumb-item active text-white">Сервизни Продукти</li>
+            </ol>
+        </nav>
+        <h1>СЕРВИЗНИ ПРОДУКТИ</h1>
+    </div>
+</section>
+
+<div class="container py-5">
+    <div class="row g-4">
+        
+        <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="./IMAGES/spray-za-chistene-spirachki.png" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2>Спрей за почистване на спирачки 444</h2>
+                    <p>Ефективно премахва масло, мазнини и спирачен прах, осигурявайки максимална безопасност.</p>
+                    <a href="spray-za-chistene-spirachki.html" class="btn-detail">Детайли</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="./IMAGES/liquid-gress.png" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2>Течна грес 444</h2>
+                    <p>Силно леплива и устойчива на налягане смазка, идеална за вериги, панти и зъбни предавки.</p>
+                    <a href="liquid-gress.html" class="btn-detail">Детайли</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="./IMAGES/spray-za-pochistvane-dvigatel.png" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2>Спрей за почистване на двигатели 444</h2>
+                    <p>Мощна формула, която разтваря упоритите мазнини без да уврежда пластмасовите части.</p>
+                    <a href="spray-za-pochistvane-dvigatel.html" class="btn-detail">Детайли</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="./IMAGES/tire-sealer-healer-kit.png" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2>Спрей за ремонт на гуми 400 мл.</h2>
+                    <p>Бързо и практично решение за запечатване и напомпване на спукани гуми на пътя.</p>
+                    <a href="tire-sealer-healer.html" class="btn-detail">Детайли</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="./IMAGES/steering-wheel-noise-canceler.png" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2>Добавка за шума в хидравликата 330 мл.</h2>
+                    <p>Намалява шума и подобрява работата на хидравличната система на волана.</p>
+                    <a href="steering-wheel-noise-canceler.html" class="btn-detail">Детайли</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="./IMAGES/engine-oil-leak-stop.png" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2>Добавка против теч на масло 330 мл.</h2>
+                    <p>Възстановява еластичността на уплътненията и предотвратява загубата на масло.</p>
+                    <a href="engine-oil-leak-stop.html" class="btn-detail">Детайли</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="./IMAGES/radiator-cleaner.png" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2>Препарат за почистване на радиатори 330 мл.</h2>
+                    <p>Премахва котлен камък и ръжда, оптимизирайки охлаждането на двигателя.</p>
+                    <a href="radiator-cleaner.html" class="btn-detail">Детайли</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="./IMAGES/dpf-cleaner-spray.png" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2>Спрей за почистване на DPF 500 мл.</h2>
+                    <p>Почиства саждите във филтъра и възстановява работата на изпускателната система.</p>
+                    <a href="dpf-cleaning-spray.html" class="btn-detail">Детайли</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="./IMAGES/engine-block-crack-healer.jpg" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2>Ремонт на пукнатини в блока 240 мл.</h2>
+                    <p>Запечатва микропукнатини и течове в охладителната система без разглобяване.</p>
+                    <a href="block-crack-healer.html" class="btn-detail">Детайли</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="./IMAGES/liquid-gasket-black.jpg" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2>Alfa Force RTV Черен силикон 225 гр.</h2>
+                    <p>Високотемпературен уплътнител за надеждна изолация на части по двигателя.</p>
+                    <a href="black-liquid-gasket.html" class="btn-detail">Детайли</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="main-footer bg-black text-white pt-5 pb-3">
+    <div class="container">
+        <div class="row g-4">
+            
+            <div class="col-md-4">
+                <img src="./IMAGES/444Logo.png" alt="444 Logo" height="70" class="mb-3">
+                <p class="text-secondary small">
+                    Над 20 години опит в сектора, ние произвеждаме най-доброто за вашия двигател. Качество без компромис.
+                </p>
+                <div class="social-links mt-3">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-4 ps-md-5">
+                <h5 class="fw-bold mb-4 text-warning">Бърз Меньо</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="index.html">Начало</a></li>
+                    <li><a href="katalogIndex.html">Нашите Продукти</a></li>
+                    <li><a href="start_selling.html">Стани дистрибутор</a></li>
+                    <li><a href="contact.html">Свържете се с нас</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="fw-bold mb-4 text-warning">Контакти</h5>
+                <div class="contact-item d-flex mb-3">
+                    <i class="fas fa-phone-alt text-warning mt-1 me-3"></i>
+                    <p class="text-secondary small mb-0">+359 87 713 85 01</p>
+                </div>
+                <div class="contact-item d-flex">
+                    <i class="fas fa-envelope text-warning mt-1 me-3"></i>
+                    <p class="text-secondary small mb-0">bulgaria@444.com.tr</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-4 border-secondary opacity-25">
+
+        <div class="text-center">
+            <p class="text-secondary small mb-0">
+                &copy; 2026 444 МОТОРНИ МАСЛА. Всички права запазени.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
