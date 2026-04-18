@@ -4,230 +4,218 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Станете дистрибутор на 444 | Партньорство</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        /* --- GENEL AYARLAR --- */
+        :root {
+            --primary-yellow: #ffc107;
+            --dark-bg: #0d0d0d;
+            --steel-gray: #1a1a1a;
+            --text-gray: #b0b0b0;
+        }
+
         body { 
-            background-color: #f4f4f4; /* Beyazın bir tık koyusu (İstediğin ton) */
-            color: #333; 
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', sans-serif; 
+            background-color: #fff; 
+            color: #111;
             margin: 0;
         }
 
-        /* Header Sabit (Fixed) olduğu için içeriği aşağı iten boşluk */
-        .main-wrapper {
-            padding-top: 160px; /* Header'ın arkasında kalma sorununu çözer */
-        }
+        /* --- NAVIGATION --- */
+        .navbar { background-color: var(--dark-bg) !important; padding: 15px 0; }
+        .nav-link { font-weight: 700; font-size: 13px; letter-spacing: 1px; color: #fff !important; }
+        .nav-link:hover { color: var(--primary-yellow) !important; }
+        .fixed-header-spacer { height: 120px; } /* Header yüksekliği kadar boşluk */
 
-        .bg-black { background-color: #0d0d0d !important; }
-
-        /* --- BREADCRUMB (Tıklanabilir Yol) --- */
-        .breadcrumb-section {
-            background-color: #ebebeb;
-            padding: 12px 0;
-            border-bottom: 1px solid #ddd;
-            margin-bottom: 0;
-        }
-        .breadcrumb-item a { color: #d90429; text-decoration: none; font-weight: 600; font-size: 14px; }
-        .breadcrumb-item.active { color: #666; font-size: 14px; }
-
-        /* --- HERO & FORM --- */
-        .hero-section { 
-            padding: 60px 0 120px 0; 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/img/partnership-bg.jpg'); 
-            background-size: cover; 
-            text-align: center;
+        /* --- HERO SECTION --- */
+        .dist-hero {
+            background: linear-gradient(90deg, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.4) 100%), 
+                        url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
             color: white;
+            border-bottom: 5px solid var(--primary-yellow);
         }
 
-        .form-container {
-            background-color: #ffffff; /* Saf Beyaz Form */
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid #dee2e6;
-            margin-top: -80px; /* Hero içine girme efekti */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        .dist-hero h1 { font-weight: 800; font-size: 3.5rem; text-transform: uppercase; line-height: 1; }
+        .dist-hero p { color: var(--primary-yellow); font-weight: 600; font-size: 1.2rem; margin-top: 15px; }
+
+        /* --- FEATURES SECTION --- */
+        .section-title { font-weight: 800; position: relative; padding-bottom: 15px; margin-bottom: 40px; }
+        .section-title::after { 
+            content: ''; position: absolute; left: 0; bottom: 0; 
+            width: 60px; height: 5px; background: var(--primary-yellow); 
         }
 
-        .form-label { color: #444; font-weight: 700; margin-bottom: 5px; font-size: 14px; }
-        .form-control {
-            background-color: #fff;
-            border: 1px solid #ced4da;
-            color: #333;
-            padding: 10px;
+        .info-card {
+            background: var(--steel-gray);
+            color: white;
+            padding: 30px;
+            height: 100%;
+            transition: 0.3s;
+            border: 1px solid #333;
+        }
+        .info-card:hover { border-color: var(--primary-yellow); transform: translateY(-5px); }
+        .info-card i { font-size: 35px; color: var(--primary-yellow); margin-bottom: 20px; }
+        .info-card h4 { font-weight: 700; margin-bottom: 15px; }
+        .info-card p { color: var(--text-gray); font-size: 0.9rem; margin-bottom: 0; }
+
+        /* --- FORM SECTION --- */
+        .form-section { background-color: #f9f9f9; padding: 80px 0; }
+        .form-wrapper { background: white; padding: 50px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); }
+        
+        .form-label { font-weight: 700; font-size: 13px; text-transform: uppercase; color: #444; }
+        .form-control { 
+            border-radius: 0; border: 2px solid #eee; padding: 12px; 
+            transition: 0.3s; font-size: 14px;
+        }
+        .form-control:focus { 
+            border-color: var(--primary-yellow); box-shadow: none; outline: 0; 
         }
 
-        .btn-submit {
-            background-color: #ffc107;
+        .btn-send {
+            background: var(--primary-yellow);
             color: #000;
-            font-weight: 800;
             border: none;
-            padding: 15px;
-            width: 100%;
+            padding: 18px 40px;
+            font-weight: 800;
             text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 100%;
             transition: 0.3s;
         }
-        .btn-submit:hover { background-color: #e5af06; transform: translateY(-2px); }
+        .btn-send:hover { background: #000; color: #fff; }
 
-        .benefit-card {
-            padding: 20px;
-            border-left: 4px solid #ffc107;
-            background-color: #fdfdfd;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        /* --- FOOTER (FIXED & CLEAN) --- */
+        footer { background: var(--dark-bg); color: white; border-top: 4px solid var(--primary-yellow); padding-top: 60px; }
+        .footer-logo { height: 50px; margin-bottom: 20px; }
+        .footer-title { color: var(--primary-yellow); font-weight: 700; margin-bottom: 25px; text-transform: uppercase; font-size: 1rem; }
+        .footer-links { list-style: none; padding: 0; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: var(--text-gray); text-decoration: none; font-size: 14px; transition: 0.3s; }
+        .footer-links a:hover { color: var(--primary-yellow); padding-left: 5px; }
+        .social-box a { color: white; margin-right: 15px; font-size: 1.2rem; transition: 0.3s; }
+        .social-box a:hover { color: var(--primary-yellow); }
+        .copyright { background: #050505; padding: 20px 0; margin-top: 50px; color: #555; font-size: 12px; }
+
+        @media (max-width: 768px) {
+            .dist-hero h1 { font-size: 2.5rem; }
+            .form-wrapper { padding: 30px; }
         }
-        .benefit-card h3 { font-size: 1.1rem; color: #000; font-weight: 700; }
-        .benefit-card p { font-size: 0.9rem; color: #666; margin-bottom: 0; }
-/* --- Footer Stilleri --- */
-
-.bg-black {
-    background-color: #0d0d0d !important; /* Çok koyu siyah */
-}
-
-.main-footer {
-    border-top: 3px solid #ffc107; /* Footer'ın en üstüne ince sarı bir çizgi */
-}
-
-/* Linklerin görünümü ve hover efekti */
-.footer-links li {
-    margin-bottom: 12px;
-}
-
-.footer-links a {
-    color: #bbb;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 14px;
-}
-
-.footer-links a:hover {
-    color: #ffc107; /* Üzerine gelince sarı olsun */
-    padding-left: 8px; /* Hafif sağa kaysın */
-}
-
-/* Sosyal Medya İkon Hover Efekti */
-.social-links a {
-    font-size: 18px;
-    transition: transform 0.3s ease, color 0.3s ease;
-    display: inline-block;
-}
-
-.social-links a:hover {
-    color: #ffc107 !important;
-    transform: translateY(-3px); /* Hafif yukarı zıplasın */
-}
-
-/* İletişim İkonları */
-.contact-item i {
-    font-size: 16px;
-}
     </style>
 </head>
 <body>
 
-<header class="fixed-top shadow-sm">
-    <div class="top-header bg-dark text-white py-2 d-none d-md-block">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="contact-info small">
-                <i class="fas fa-phone-alt me-2 text-warning"></i> +359 877 13 85 01 
-                <span class="mx-3 text-secondary">|</span>
-                <i class="fas fa-envelope me-2 text-warning"></i> bulgaria@444.com.tr
-            </div>
-            <div class="lang-switcher small">
-                <a href="#" class="text-white text-decoration-none">BG</a>
-                <span class="mx-1">|</span>
-                <a href="#" class="text-secondary text-decoration-none">EN</a>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="./IMAGES/444Logo.png" alt="444 Logo" height="60">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">НАЧАЛО</a></li>
+                <li class="nav-item"><a class="nav-link" href="markaBio.html">444</a></li>
+                <li class="nav-item"><a class="nav-link" href="katalogIndex.html">ПРОДУКТИ</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">КОНТАКТИ</a></li>
+                <li class="nav-item ms-lg-3">
+                    <a href="#" class="btn btn-warning fw-bold px-4 rounded-0">ПАЗАРУВАЙ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="fixed-header-spacer"></div>
+
+<section class="dist-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <h1 class="mb-0">СТАНЕТЕ НАШ</h1>
+                <h1 style="color: var(--primary-yellow);">ДИСТРИБУТОР</h1>
+                <p>Лидер в автомобилните иновации търси своите партньори в България.</p>
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="./IMAGES/444Logo.png" alt="444 Logo" height="90">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link px-3" href="index.html">НАЧАЛО</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="markaBio.html">444</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="katalogIndex.html">ПРОДУКТИ</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="contact.html">КОНТАКТИ</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a href="#" class="btn btn-warning fw-bold px-4 rounded-pill">ПАЗАРУВАЙ</a>
-                    </li>
-                </ul>
+</section>
+
+<section class="py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12 text-center text-md-start">
+                <h2 class="section-title">ЗАЩО ПАРТНЬОРСТВО С 444?</h2>
             </div>
         </div>
-    </nav>
-</header>
-
-<div class="main-wrapper">
-    <nav class="breadcrumb-section">
-        <div class="container">
-            <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item"><a href="index.html">Начало</a></li>
-                <li class="breadcrumb-item active">Стани дистрибутор</li>
-            </ol>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="info-card">
+                    <i class="fas fa-industry"></i>
+                    <h4>Директен Производител</h4>
+                    <p>Ние контролираме целия процес — от R&D до крайната опаковка. Получавате гарантирано качество без посредници.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h4>Максимална Печалба</h4>
+                    <p>Атрактивни дистрибуторски цени и гъвкави схеми за отстъпки, проектирани за дългосрочен растеж на вашия бизнес.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-card">
+                    <i class="fas fa-boxes"></i>
+                    <h4>Складова Наличност</h4>
+                    <p>Бърза доставка и 99% наличност на всички продукти в каталога ни през цялата година.</p>
+                </div>
+            </div>
         </div>
-    </nav>
+    </div>
+</section>
 
-    <section class="hero-section">
-        <div class="container">
-            <h1 class="display-4 fw-bold text-white">СТАНЕТЕ НАШ ПАРТНЬОР</h1>
-            <p class="lead text-light">Разширете бизнеса си с иновациите на 444</p>
-        </div>
-    </section>
-
-    <div class="container pb-5">
+<section class="form-section">
+    <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-11">
-                <div class="form-container">
+            <div class="col-lg-10">
+                <div class="form-wrapper">
                     <div class="row">
-                        <div class="col-md-5 pe-md-5 mb-4 mb-md-0">
-                            <h2 class="mb-4 fw-bold">Защо 444?</h2>
-                            <div class="benefit-card">
-                                <h3>20+ години опит</h3>
-                                <p>Доказано качество и европейски стандарти в производството.</p>
-                            </div>
-                            <div class="benefit-card">
-                                <h3>Висок марж</h3>
-                                <p>Атрактивни цени и преференциални условия за дистрибутори.</p>
-                            </div>
-                            <div class="benefit-card">
-                                <h3>Логистика</h3>
-                                <p>Бърза доставка и постоянна складова наличност.</p>
-                            </div>
+                        <div class="col-md-12 mb-5">
+                            <h2 class="fw-800">ФОРМА ЗА ЗАПИТВАНЕ</h2>
+                            <p class="text-muted small">Попълнете формата и наш представител ще се свърже с вас до 24 часа.</p>
                         </div>
-
-                        <div class="col-md-7">
+                        <div class="col-md-12">
                             <form>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label class="form-label">Вашето име</label>
-                                        <input type="text" class="form-control" placeholder="Име Фамилия">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Име и Фамилия</label>
+                                        <input type="text" class="form-control" placeholder="Въведете име">
                                     </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label class="form-label">Фирма</label>
-                                        <input type="text" class="form-control" placeholder="Име на фирмата">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Име на фирма</label>
+                                        <input type="text" class="form-control" placeholder="Фирма">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Електронна поща</label>
+                                        <input type="email" class="form-control" placeholder="email@domain.com">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Телефон за връзка</label>
+                                        <input type="tel" class="form-control" placeholder="+359 ...">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Вашето съобщение</label>
+                                        <textarea class="form-control" rows="5" placeholder="Напишете ни за вашия регион и дейност..."></textarea>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="submit" class="btn-send">ИЗПРАТИ <i class="fas fa-chevron-right ms-2"></i></button>
                                     </div>
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Телефон</label>
-                                    <input type="tel" class="form-control" placeholder="+359 ...">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Град</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Съобщение</label>
-                                    <textarea class="form-control" rows="4"></textarea>
-                                </div>
-                                <button type="submit" class="btn-submit rounded-pill">Изпрати запитване</button>
                             </form>
                         </div>
                     </div>
@@ -235,43 +223,43 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<footer class="main-footer bg-black text-white pt-5 pb-3">
+<footer>
     <div class="container">
-        <div class="row g-4">
+        <div class="row g-5">
             <div class="col-md-4">
-                <img src="./IMAGES/444Logo.png" alt="444 Logo" height="60" class="mb-3">
-                <p class="text-secondary small mt-2">
-                   Нашата компания е собственик на марката и производител на продуктите 444. С над 20-годишен опит в сектора.
+                <img src="./IMAGES/444Logo.png" alt="444 Logo" class="footer-logo">
+                <p class="text-secondary small">
+                    Собственик на марката и производител на висококачествени автомобилни продукти с над 20 години присъствие на международния пазар.
                 </p>
-                <div class="social-links mt-2">
-                    <a href="#" class="me-3 text-white"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="me-3 text-white"><i class="fab fa-instagram"></i></a>
+                <div class="social-box mt-4">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <div class="col-md-4 ps-md-5">
-                <h5 class="fw-bold mb-4 text-warning">Бърз Меньо</h5>
-                <ul class="list-unstyled footer-links">
-                    <li><a href="index.html">Начало</a></li>
-                    <li><a href="katalogIndex.html">Нашите Продукти</a></li>
-                    <li><a href="contact.html">Свържете се с нас</a></li>
+            <div class="col-md-4">
+                <h5 class="footer-title">Бързи връзки</h5>
+                <ul class="footer-links">
+                    <li><a href="index.html">Начална страница</a></li>
+                    <li><a href="katalogIndex.html">Продуктов каталог</a></li>
+                    <li><a href="markaBio.html">За марката 444</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
                 </ul>
             </div>
             <div class="col-md-4">
-                <h5 class="fw-bold mb-4 text-warning">Свържете се с нас</h5>
-                <div class="contact-item d-flex mb-3">
-                    <i class="fas fa-phone-alt text-warning mt-1 me-3"></i>
-                    <p class="text-secondary small mb-0">+359 87 713 85 01</p>
-                </div>
-                <div class="contact-item d-flex">
-                    <i class="fas fa-envelope text-warning mt-1 me-3"></i>
-                    <p class="text-secondary small mb-0">bulgaria@444.com.tr</p>
-                </div>
+                <h5 class="footer-title">Контакти</h5>
+                <p class="text-secondary small mb-2"><i class="fas fa-map-marker-alt text-warning me-2"></i> Plovdiv, Bulgaria</p>
+                <p class="text-secondary small mb-2"><i class="fas fa-phone-alt text-warning me-2"></i> +359 87 713 85 01</p>
+                <p class="text-secondary small mb-0"><i class="fas fa-envelope text-warning me-2"></i> bulgaria@444.com.tr</p>
             </div>
         </div>
-        <hr class="my-4 border-secondary">
-        <p class="text-center text-secondary small">&copy; 2026 444 МОТОРНИ МАСЛА. Всички права запазени.</p>
+    </div>
+    <div class="copyright text-center">
+        <div class="container">
+            &copy; 2026 444 МОТОРНИ МАСЛА & АВТОХИМИЯ. Всички права запазени.
+        </div>
     </div>
 </footer>
 
