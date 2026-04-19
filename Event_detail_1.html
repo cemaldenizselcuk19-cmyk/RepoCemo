@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BKE66V4J4L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-BKE66V4J4L");
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерия | 444 Bulgaria</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css">
+
+    <style>
+        :root { --brand-yellow: #ffc107; --brand-black: #0d0d0d; }
+        body { font-family: 'Montserrat', sans-serif; background-color: #fff; margin: 0; }
+
+        /* --- HEADER STYLES (SABİT) --- */
+        .bg-black { background-color: var(--brand-black) !important; }
+        .main-wrapper { padding-top: 155px; } /* Header arkada kalmasın diye */
+
+        /* --- GALLERY SPECIFIC --- */
+        .gallery-hero { 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover; background-position: center;
+            padding: 60px 0; color: white; border-bottom: 5px solid var(--brand-yellow);
+        }
+
+        .gallery-item {
+            position: relative; overflow: hidden; border-radius: 4px; cursor: pointer;
+            height: 280px; margin-bottom: 24px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .gallery-item:hover img { transform: scale(1.1); }
+        .gallery-item::after {
+            content: "\f00e"; font-family: "Font Awesome 5 Free"; font-weight: 900;
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(255, 193, 7, 0.6); color: #000;
+            display: flex; align-items: center; justify-content: center; font-size: 2rem; opacity: 0; transition: 0.3s;
+        }
+        .gallery-item:hover::after { opacity: 1; }
+
+        /* --- FOOTER STYLES (SABİT) --- */
+        .main-footer { border-top: 3px solid var(--brand-yellow); background-color: var(--brand-black); }
+        .footer-links a { color: #bbb; text-decoration: none; transition: 0.3s; font-size: 14px; }
+        .footer-links a:hover { color: var(--brand-yellow); padding-left: 8px; }
+        .social-links a { font-size: 18px; transition: 0.3s; display: inline-block; }
+        .social-links a:hover { color: var(--brand-yellow) !important; transform: translateY(-3px); }
+    </style>
+</head>
+<body>
+
+<header class="fixed-top shadow-sm">
+    <div class="top-header bg-dark text-white py-2 d-none d-md-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="contact-info small">
+                <i class="fas fa-phone-alt me-2 text-warning"></i> +359 877 13 85 01 
+                <span class="mx-3 text-secondary">|</span>
+                <i class="fas fa-envelope me-2 text-warning"></i> bulgaria@444.com.tr
+            </div>
+            <div class="lang-switcher small">
+                <a href="#" class="text-white text-decoration-none">BG</a>
+                <span class="mx-1">|</span>
+                <a href="#" class="text-secondary text-decoration-none">EN</a>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./IMAGES/444Logo.png" alt="444 Logo" height="70">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link px-3 fw-bold" href="index.html">НАЧАЛО</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 fw-bold" href="markaBio.html">444</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 fw-bold" href="katalogIndex.html">ПРОДУКТИ</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 fw-bold" href="contact.html">КОНТАКТИ</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="#" class="btn btn-warning fw-bold px-4 rounded-pill">ПАЗАРУВАЙ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="main-wrapper">
+    <section class="gallery-hero text-center">
+        <div class="container">
+            <h1 class="display-4 fw-800 text-white">ГАЛЕРИЯ СЪБИТИЯ</h1>
+            <p class="lead text-warning fw-bold">Разгледайте нашите моменти от последните събития</p>
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <a href="https://images.unsplash.com/photo-1486006396123-c775170aa561" class="glightbox">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1486006396123-c775170aa561" alt="444">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122" class="glightbox">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122" alt="444">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98" class="glightbox">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98" alt="444">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-dark px-5 py-2 fw-bold border-warning"> <i class="fas fa-arrow-left me-2"></i> НАЗАД</a>
+        </div>
+    </div>
+</div>
+
+<footer style="background-color: #0d0d0d; color: #fff; border-top: 4px solid #ffc107; padding-top: 60px;">
+    <div class="container">
+        <div class="row g-4">
+            
+            <div class="col-lg-4 col-md-6">
+                <img src="./IMAGES/444Logo.png" alt="444 Logo" style="height: 60px; margin-bottom: 20px;">
+                <p style="color: #b0b0b0; font-size: 14px; line-height: 1.6; max-width: 300px;">
+                    Лидер в производството на висококачествени автомобилни масла и химикали. Инвестираме в иновации, за да защитим вашия двигател.
+                </p>
+                <div style="margin-top: 20px;">
+                    <a href="#" style="color: #fff; margin-right: 15px; font-size: 18px; transition: 0.3s;"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" style="color: #fff; margin-right: 15px; font-size: 18px; transition: 0.3s;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: #fff; margin-right: 15px; font-size: 18px; transition: 0.3s;"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <h5 style="color: #ffc107; font-weight: 700; text-transform: uppercase; font-size: 16px; margin-bottom: 25px;">Меню</h5>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 12px;"><a href="index.html" style="color: #b0b0b0; text-decoration: none; font-size: 14px; transition: 0.3s;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='#b0b0b0'">Начало</a></li>
+                    <li style="margin-bottom: 12px;"><a href="markaBio.html" style="color: #b0b0b0; text-decoration: none; font-size: 14px; transition: 0.3s;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='#b0b0b0'">За Марката</a></li>
+                    <li style="margin-bottom: 12px;"><a href="katalogIndex.html" style="color: #b0b0b0; text-decoration: none; font-size: 14px; transition: 0.3s;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='#b0b0b0'">Продукти</a></li>
+                    <li style="margin-bottom: 12px;"><a href="contact.html" style="color: #b0b0b0; text-decoration: none; font-size: 14px; transition: 0.3s;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='#b0b0b0'">Контакти</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h5 style="color: #ffc107; font-weight: 700; text-transform: uppercase; font-size: 16px; margin-bottom: 25px;">Партньорство</h5>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 12px;"><a href="start_selling.html" style="color: #b0b0b0; text-decoration: none; font-size: 14px; transition: 0.3s;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='#b0b0b0'">Станете дистрибутор</a></li>
+                    <li style="margin-bottom: 12px;"><a href="#" style="color: #b0b0b0; text-decoration: none; font-size: 14px; transition: 0.3s;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='#b0b0b0'">Техническа база</a></li>
+                    <li style="margin-bottom: 12px;"><a href="#" style="color: #b0b0b0; text-decoration: none; font-size: 14px; transition: 0.3s;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='#b0b0b0'">Сертификати</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h5 style="color: #ffc107; font-weight: 700; text-transform: uppercase; font-size: 16px; margin-bottom: 25px;">Контакти</h5>
+                <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                    <i class="fas fa-map-marker-alt" style="color: #ffc107; margin-top: 5px; margin-right: 15px;"></i>
+                    <p style="color: #b0b0b0; font-size: 14px; margin: 0;">Plovdiv, Bulgaria<br>Industrial Zone</p>
+                </div>
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <i class="fas fa-phone-alt" style="color: #ffc107; margin-right: 15px;"></i>
+                    <p style="color: #b0b0b0; font-size: 14px; margin: 0;">+359 87 713 85 01</p>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <i class="fas fa-envelope" style="color: #ffc107; margin-right: 15px;"></i>
+                    <p style="color: #b0b0b0; font-size: 14px; margin: 0;">bulgaria@444.com.tr</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 50px; padding: 25px 0; border-top: 1px solid rgba(255,255,255,0.05); text-align: center;">
+            <p style="color: #666; font-size: 12px; margin: 0; letter-spacing: 1px;">
+                &copy; 2026 444 МОТОРНИ МАСЛА & АВТОХИМИЯ. ВСИЧКИ ПРАВА ЗАПАЗЕНИ.
+            </p>
+        </div>
+    </div>
+</footer>
